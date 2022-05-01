@@ -1,5 +1,5 @@
 dependencies {
     add("commonMainApi", project(":korge"))
     //add("commonMainApi", project(":korge-intellij-plugin"))
-    add("jvmMainApi", kotlin("reflect"))
+    add("jvmMainApi", "org.jetbrains.kotlin:kotlin-reflect:1.6.20")
 }

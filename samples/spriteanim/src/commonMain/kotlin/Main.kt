@@ -1,10 +1,12 @@
-import com.soywiz.klock.*
-import com.soywiz.korev.*
-import com.soywiz.korge.*
-import com.soywiz.korge.input.*
+
+import com.soywiz.klock.milliseconds
+import com.soywiz.klock.seconds
+import com.soywiz.korev.Key
+import com.soywiz.korge.Korge
+import com.soywiz.korge.input.InputKeys
 import com.soywiz.korge.view.*
-import com.soywiz.korim.format.*
-import com.soywiz.korio.file.std.*
+import com.soywiz.korim.format.readBitmap
+import com.soywiz.korio.file.std.resourcesVfs
 
 const val PADDING = 5.0
 
@@ -99,6 +101,7 @@ suspend fun main() = Korge(width = 512, height = 512) {
     val player1 = PlayerCharacter(spriteAnimationDown, Key.W, Key.S, Key.A, Key.D).apply {
         scale(3.0)
         xy(100, 100)
+        smoothing = false
     }
 
     text("Player 1 controls: ${player1.assignedKeyDesc}") { position(PADDING, PADDING) }

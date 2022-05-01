@@ -33,6 +33,8 @@ include(":korau")
 include(":korgw")
 include(":korvi")
 include(":korge")
+include(":samples:fleks-ecs")
+include(":samples:spriteanim")
 
 if (!inCI) {
     include(":korge-sandbox")
@@ -54,6 +56,7 @@ if (!disabledExtraKorgeLibs) {
 
     // This is required because having tons of gradle modules is super slow
     boolean skipKorgeSamples = !includeKorlibsSamples
+//    boolean skipKorgeSamples = false
 
     if (!skipKorgeSamples && !inCI) {
         fileTree(new File(rootProject.projectDir, "samples")) {
